@@ -1,0 +1,264 @@
+{% extends 'web/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Sub banner start -->
+<div class="sub-banner">
+    <div class="container">
+        <div class="breadcrumb-area">
+            <h1>Properties</h1>
+            <ul class="breadcrumbs">
+                <li><a href="index.html">Home</a></li>
+                <li class="active">Properties</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- Sub Banner end -->
+
+<!-- Properties section body start -->
+<div class="properties-section-body content-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-xs-12">
+            {% comment %}
+                <!-- Option bar start -->
+                <div class="option-bar">
+                    <div class="row">
+                        <div class="col-lg-6 col-8">
+                            <div class="sorting-options2">
+                                <span class="sort">Sort by:</span>
+                                <select class="selectpicker search-fields" name="default-order">
+                                    <option>Default Order</option>
+                                    <option>Price High to Low</option>
+                                    <option>Price: Low to High</option>
+                                    <option>Newest Properties</option>
+                                    <option>Oldest Properties</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-4">
+                            <div class="sorting-options">
+                                <a href="properties-list-fullwidth.html" class="change-view-btn"><i class="fa fa-th-list"></i></a>
+                                <a href="properties-grid-fullwidth.html" class="change-view-btn active-view-btn"><i class="fa fa-th-large"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endcomment %}
+                <!-- grid properties start -->
+                <div class="row">
+                {% for features in Property1 %}
+                
+                
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="property-box-3">
+                            <img src="{{features.property_image.url}}" alt="photo" class="img-fluid w-100">
+                            <div class="ling-section">
+                                <h3>
+                                    <a href="properties-details.html">{{features.property_name}}</a>
+                                </h3>
+                                <ul class="member-socials clearfix">
+                                    <li>
+                                        <i class="flaticon-bed"></i>{{features.property_items}}
+                                    </li>
+                                    {% comment %} <li>
+                                        <i class="flaticon-bathroom"></i> 3 Beds
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-area"></i> 2 Baths
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-car"></i> 1 Garage
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-car"></i> 3 Balcony
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-sell"></i> security
+                                    </li> {% endcomment %}
+                                </ul>
+                                <a href="properties-details.html" class="read-more-btn">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    {% comment %} <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="property-box-3">
+                            <img src="{% static 'web/img/properties/properties-11.jpg' %}" alt="photo" class="img-fluid">
+                            <div class="ling-section">
+                                <h3>
+                                    <a href="properties-details.html">Relaxing Apartment</a>
+                                </h3>
+                                <ul class="member-socials clearfix">
+                                    <li>
+                                        <i class="flaticon-bed"></i> 4800 sq ft
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-bathroom"></i> 3 Beds
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-area"></i> 2 Baths
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-car"></i> 1 Garage
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-car"></i> 3 Balcony
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-sell"></i> security
+                                    </li>
+                                </ul>
+                                <a href="properties-details.html" class="read-more-btn">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="property-box-3">
+                            <img src="{% static 'web/img/properties/properties-10.jpg' %}" alt="photo" class="img-fluid w-100">
+                            <div class="ling-section">
+                                <h3>
+                                    <a href="properties-details.html">Two storey modern flat</a>
+                                </h3>
+                                <ul class="member-socials clearfix">
+                                    <li>
+                                        <i class="flaticon-bed"></i> 4800 sq ft
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-bathroom"></i> 3 Beds
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-area"></i> 2 Baths
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-car"></i> 1 Garage
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-car"></i> 3 Balcony
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-sell"></i> security
+                                    </li>
+                                </ul>
+                                <a href="properties-details.html" class="read-more-btn">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="property-box-3">
+                            <img src="{% static 'web/img/properties/properties-12.jpg' %}" alt="photo" class="img-fluid w-100">
+                            <div class="ling-section">
+                                <h3>
+                                    <a href="properties-details.html">Real Luxury Villa</a>
+                                </h3>
+                                <ul class="member-socials clearfix">
+                                    <li>
+                                        <i class="flaticon-bed"></i> 4800 sq ft
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-bathroom"></i> 3 Beds
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-area"></i> 2 Baths
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-car"></i> 1 Garage
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-car"></i> 3 Balcony
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-sell"></i> security
+                                    </li>
+                                </ul>
+                                <a href="properties-details.html" class="read-more-btn">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="property-box-3">
+                            <img src="{% static 'web/img/properties/properties-15.jpg' %}" alt="photo" class="img-fluid w-100">
+                            <div class="ling-section">
+                                <h3>
+                                    <a href="properties-details.html">Office Apartment</a>
+                                </h3>
+                                <ul class="member-socials clearfix">
+                                    <li>
+                                        <i class="flaticon-bed"></i> 4800 sq ft
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-bathroom"></i> 3 Beds
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-area"></i> 2 Baths
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-car"></i> 1 Garage
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-car"></i> 3 Balcony
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-sell"></i> security
+                                    </li>
+                                </ul>
+                                <a href="properties-details.html" class="read-more-btn">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="property-box-3">
+                            <img src="{% static 'web/img/properties/properties-13.jpg' %}" alt="photo" class="img-fluid w-100">
+                            <div class="ling-section">
+                                <h3>
+                                    <a href="properties-details.html">Luxury Villa</a>
+                                </h3>
+                                <ul class="member-socials clearfix">
+                                    <li>
+                                        <i class="flaticon-bed"></i> 4800 sq ft
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-bathroom"></i> 3 Beds
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-area"></i> 2 Baths
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-car"></i> 1 Garage
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-car"></i> 3 Balcony
+                                    </li>
+                                    <li>
+                                        <i class="flaticon-sell"></i> security
+                                    </li>
+                                </ul>
+                                <a href="properties-details.html" class="read-more-btn">Read More</a>
+                            </div>
+                        </div>
+                    </div> {% endcomment %}
+                </div>
+                <!-- Page navigation start -->
+                <div class="pagination-box hidden-mb-45 text-center">
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link" href="#">Prev</a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="properties-grid-rightside.html">1</a></li>
+                            <li class="page-item"><a class="page-link" href="properties-grid-leftside.html">3</a></li>
+                            <li class="page-item"><a class="page-link active" href="properties-grid-fullwidth.html">2</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="properties-list-rightside.html">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Properties section body end -->
+
+{% endblock %}

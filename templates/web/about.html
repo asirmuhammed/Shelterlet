@@ -1,0 +1,709 @@
+{% extends 'web/partials/base.html' %} {% load static %} {% block content %}
+
+<!-- Sub banner start -->
+<div class="sub-banner">
+  <div class="container">
+    <div class="breadcrumb-area">
+      <h1>About Us</h1>
+      <ul class="breadcrumbs">
+        <li><a href="index.html">Home</a></li>
+        <li class="active">About Us</li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- Sub Banner end -->
+
+<!-- About city estate start -->
+<div class="about-real-estate content-area-5 bg-grea-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+        <div class="about-text clearfix">
+          <h3>Welcome to shelterlet</h3>
+          <p>
+            We are a community-driven database that focuses on build-to-rent and
+            co-living developments in the UK. rather we collect and present
+            public data of such developments and provide their management
+            information, Through our content-rich, data-driven platform, tenants
+            can conduct in-depth research and connect directly with landlords.
+            Valuable insights from customer feedback help prospective tenants
+            make informed decisions while enabling landlords to tailor their
+            future developments to align with upcoming market trends.
+          </p>
+          
+          <div class="bottom">
+            {% comment %} <div class="left">
+              <h5 class="name">james holler</h5>
+              <p class="post mb-0">General manager</p>
+            </div>
+            <div class="signature float-right">
+              <img src="{% static 'web/img/signature.png' %}" alt="signature" />
+            </div> {% endcomment %}
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+        <div class="about-img-section">
+          <div class="image-box sssa">
+            <div class="image-1">
+              <img
+                src="{% static 'web/img/about-bg.png' %}"
+                class="w-100"
+                alt="photo"
+              />
+            </div>
+          </div>
+          <div class="about-box-Experience">
+            <img
+              src="{% static 'web/img/about-shape.png' %}"
+              alt="image"
+              class="img-fluid"
+            />
+            <div class="content">
+              <h3>25+</h3>
+              <p class="mb-0">Years of Experience</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- About city estate end -->
+
+<!-- Our team start -->
+<div class="our-team comon-slick content-area">
+  <div class="container">
+    <!-- Main title -->
+    <div class="main-title">
+      <h1>Our Agent</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      </p>
+    </div>
+    <div
+      class="slick row comon-slick-inner"
+      data-slick='{"slidesToShow": 4, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'
+    >
+    
+    
+    {% for a in agent  %}
+      <div class="item slide-box">
+        <div class="team-1">
+          <div class="team-thumb">
+            <a href="#">
+              <img
+                src="{{a.agent_image.url}}"
+                alt="agent-2"
+                class="img-fluid"
+              />
+            </a>
+            <div class="team-social flex-middle">
+              <div class="team-overlay"></div>
+              <div class="team-social-inner">
+                <a rel="nofollow" href="#" class="facebook">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a rel="nofollow" href="#" class="twitter">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a rel="nofollow" href="#" class="google">
+                  <i class="fa fa-google" aria-hidden="true"></i>
+                </a>
+                <a rel="nofollow" href="#" class="linkedin">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="team-info">
+            <h4>
+              <a href="#">{{a.agent_name}}</a>
+            </h4>
+            <p>{{a.agent_post}}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+      {% comment %} <div class="item slide-box">
+        <div class="team-1">
+          <div class="team-thumb">
+            <a href="#">
+              <img
+                src="{% static 'web/img/avatar/avatar-7.jpg' %}"
+                alt="agent-2"
+                class="img-fluid"
+              />
+            </a>
+            <div class="team-social flex-middle">
+              <div class="team-overlay"></div>
+              <div class="team-social-inner">
+                <a rel="nofollow" href="#" class="facebook">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a rel="nofollow" href="#" class="twitter">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a rel="nofollow" href="#" class="google">
+                  <i class="fa fa-google" aria-hidden="true"></i>
+                </a>
+                <a rel="nofollow" href="#" class="linkedin">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="team-info">
+            <h4>
+              <a href="#">Martin Smith</a>
+            </h4>
+            <p>Web Developer</p>
+          </div>
+        </div>
+      </div>
+      <div class="item slide-box">
+        <div class="team-1">
+          <div class="team-thumb">
+            <a href="#">
+              <img
+                src="{% static 'web/img/avatar/avatar-8.jpg' %}"
+                alt="agent-2"
+                class="img-fluid"
+              />
+            </a>
+            <div class="team-social flex-middle">
+              <div class="team-overlay"></div>
+              <div class="team-social-inner">
+                <a rel="nofollow" href="#" class="facebook">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a rel="nofollow" href="#" class="twitter">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a rel="nofollow" href="#" class="google">
+                  <i class="fa fa-google" aria-hidden="true"></i>
+                </a>
+                <a rel="nofollow" href="#" class="linkedin">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="team-info">
+            <h4>
+              <a href="#">Maria Blank</a>
+            </h4>
+            <p>Office Manager</p>
+          </div>
+        </div>
+      </div>
+      <div class="item slide-box">
+        <div class="team-1">
+          <div class="team-thumb">
+            <a href="#">
+              <img
+                src="{% static 'web/img/avatar/avatar-5.jpg' %}"
+                alt="agent-2"
+                class="img-fluid"
+              />
+            </a>
+            <div class="team-social flex-middle">
+              <div class="team-overlay"></div>
+              <div class="team-social-inner">
+                <a rel="nofollow" href="#" class="facebook">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a rel="nofollow" href="#" class="twitter">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a rel="nofollow" href="#" class="google">
+                  <i class="fa fa-google" aria-hidden="true"></i>
+                </a>
+                <a rel="nofollow" href="#" class="linkedin">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="team-info">
+            <h4>
+              <a href="#">Karen Paran</a>
+            </h4>
+            <p>Support Manager</p>
+          </div>
+        </div>
+      </div>
+      <div class="item slide-box">
+        <div class="team-1">
+          <div class="team-thumb">
+            <a href="#">
+              <img
+                src="{% static 'web/img/avatar/avatar-8.jpg' %}"
+                alt="agent-2"
+                class="img-fluid"
+              />
+            </a>
+            <div class="team-social flex-middle">
+              <div class="team-overlay"></div>
+              <div class="team-social-inner">
+                <a rel="nofollow" href="#" class="facebook">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a rel="nofollow" href="#" class="twitter">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a rel="nofollow" href="#" class="google">
+                  <i class="fa fa-google" aria-hidden="true"></i>
+                </a>
+                <a rel="nofollow" href="#" class="linkedin">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="team-info">
+            <h4>
+              <a href="#">Maria Blank</a>
+            </h4>
+            <p>Office Manager</p>
+          </div>
+        </div>
+      </div> {% endcomment %}
+    </div>
+  </div>
+</div>
+<!-- Our team end -->
+
+<!-- Counters 2 strat -->
+<div class="counters-2">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-6 border-r border-l">
+        <div class="counter-box-2">
+          <i class="flaticon-sale"></i>
+          <h1 class="counter">967</h1>
+          <p>Listings For Sale</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 border-r">
+        <div class="counter-box-2">
+          <i class="flaticon-rent"></i>
+          <h1 class="counter">1276</h1>
+          <p>Listings For Rent</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 border-r">
+        <div class="counter-box-2">
+          <i class="flaticon-user"></i>
+          <h1 class="counter">396</h1>
+          <p>Agents</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6 border-r">
+        <div class="counter-box-2">
+          <i class="flaticon-broker"></i>
+          <h1 class="counter">177</h1>
+          <p>Brokers</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Counters 2 end -->
+
+<!-- Services start -->
+<div class="services content-area bg-grea-3">
+  <div class="container">
+    <!-- Main title -->
+    <div class="main-title-3">
+      <p>Our Expertise</p>
+      <h1>Why Choose <span>Us</span></h1>
+    </div>
+
+    <div class="row">
+      {% for i in services %}
+      <div class="col-lg-4 col-md-12">
+        <div class="service-info-3 d-flex">
+          <div class="icon">
+            <i class="flaticon-user"></i>
+          </div>
+          <div class="detail align-self-center">
+            <h3>{{i.services_title}}</h3>
+            <p>
+              {{i.services_sentence}}
+            </p>
+            <a class="read-more" href="#">Read more...</a>
+            <h4>{{i.services_id}}</h4>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+
+      {% comment %} <div class="col-lg-4 col-md-12">
+        <div class="service-info-3 d-flex">
+          <div class="icon">
+            <i class="flaticon-empire-state-building"></i>
+          </div>
+          <div class="detail align-self-center">
+            <h3>Luxury Real Estate Experts</h3>
+            <p>
+              Luxury Real Estate Experts are professionals who specialize in
+              high-end and luxury real estate properties. They possess a deep
+              understanding of the luxury real estate market, including its
+              trends, demands, and customer preferences. Their expertise enables
+              them to provide personalized services to their clients, including
+              advising them on the best investment opportunities and helping
+              them navigate the complex process of buying or selling a luxury
+              property. Luxury Real Estate Experts typically have a vast network
+              of connections within the luxury real estate industry, providing
+              them with access to exclusive listings and off-market deals. Their
+              goal is to deliver an exceptional and seamless experience to their
+              clients, from initial consultation to closing the deal.
+            </p>
+            <a class="read-more" href="#">Read more...</a>
+            <h4>01</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12">
+        <div class="service-info-3 d-flex">
+          <div class="icon">
+            <i class="flaticon-discount"></i>
+          </div>
+          <div class="detail align-self-center">
+            <h3>Modern Building For Rent $ Sell</h3>
+            <p>
+              If you're looking for a modern building for rent or sale, there
+              are many options available that feature the latest design trends
+              and amenities. These buildings typically feature contemporary
+              architecture and state-of-the-art technology, along with a range
+              of amenities designed to enhance the occupant experience.
+            </p>
+            <a class="read-more" href="#">Read more...</a>
+            <h4>01</h4>
+          </div>
+        </div>
+      </div> {% endcomment %}
+    </div>
+  </div>
+</div>
+<!-- Services end -->
+
+{% comment %} <!-- Services start -->
+<div class="services content-area">
+  <div class="container">
+    <!-- Main title -->
+    <div class="main-title text-center">
+      <h1>Working With The Shelterlet</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      </p>
+    </div>
+    <div class="row">
+      
+      
+      {% for i in workingwithshelterlet %}
+      <div class="col-lg-4 col-md-12">
+        <div class="service-info-3 d-flex">
+          <div class="icon">
+            <i class="flaticon-user"></i>
+          </div>
+          <div class="detail align-self-center">
+            <h3>
+              <a href="services.html">{{i.workingwithshelterlet_title}}</a>
+            </h3>
+            <p>
+            {{i.workingwithshelterlet_sentence}}
+            </p>
+            <a class="read-more" href="services.html">Read more...</a>
+            <h4>{{i.workingwithshelterlet_id}}</h4>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+      {% comment %} <div class="col-lg-4 col-md-12">
+        <div class="service-info-3 d-flex">
+          <div class="icon">
+            <i class="flaticon-empire-state-building"></i>
+          </div>
+          <div class="detail align-self-center">
+            <h3>
+              <a href="services.html">Luxury Real Estate Experts</a>
+            </h3>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard
+            </p>
+            <a class="read-more" href="services.html">Read more...</a>
+            <h4>02</h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-12">
+        <div class="service-info-3 d-flex">
+          <div class="icon">
+            <i class="flaticon-discount"></i>
+          </div>
+          <div class="detail align-self-center">
+            <h3>
+              <a href="services.html">Modern Building For Rent $ Sell</a>
+            </h3>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the
+            </p>
+            <a class="read-more" href="services.html">Read more...</a>
+            <h4>03</h4>
+          </div>
+        </div>
+      </div> {% endcomment %}
+    {% comment %} </div>
+  </div>
+</div> {% endcomment %}
+{% comment %} <!-- Services end --> {% endcomment %} 
+
+{% comment %}
+<!-- Testimonial 4 start -->
+<div class="testimonial-4 comon-slick content-area-5">
+  <div class="container">
+    <!-- Main title -->
+    <div class="main-title">
+      <h1>Our Testimonial</h1>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+        eiusmod.
+      </p>
+    </div>
+    <div
+      class="slick row comon-slick-inner"
+      data-slick='{"slidesToShow": 2, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'
+    >
+      <div class="item slide-box">
+        <div class="testimonial-info">
+          <div class="user-section">
+            <div class="user-thumb">
+              <img
+                src="{% static 'web/img/avatar/avatar-1.jpg' %}"
+                alt="testimonial"
+              />
+              <div class="icon">
+                <i class="fa fa-quote-right"></i>
+              </div>
+            </div>
+            <div class="user-name">
+              <h5>Michelle Nelson</h5>
+              <p>Consultant</p>
+            </div>
+          </div>
+          <div class="text">
+            <p>
+              "Bitcoin is one of the most important inventions in all of human
+              history. For the first time ever, anyone can send or receive any
+              amount of money .Lorem ipsum dolor sit amet consectetur
+              adipisicing elit."
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="item slide-box">
+        <div class="testimonial-info">
+          <div class="user-section">
+            <div class="user-thumb">
+              <img
+                src="{% static 'web/img/avatar/avatar-2.jpg' %}"
+                alt="testimonial"
+              />
+              <div class="icon">
+                <i class="fa fa-quote-right"></i>
+              </div>
+            </div>
+            <div class="user-name">
+              <h5>Anne Brady</h5>
+              <p>Web Designer, Uk</p>
+            </div>
+          </div>
+          <div class="text">
+            <p>
+              "Bitcoin is one of the most important inventions in all of human
+              history. For the first time ever, anyone can send or receive any
+              amount of money .Lorem ipsum dolor sit amet consectetur
+              adipisicing elit."
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="item slide-box">
+        <div class="testimonial-info">
+          <div class="user-section">
+            <div class="user-thumb">
+              <img
+                src="{% static 'web/img/avatar/avatar-3.jpg' %}"
+                alt="testimonial"
+              />
+              <div class="icon">
+                <i class="fa fa-quote-right"></i>
+              </div>
+            </div>
+            <div class="user-name">
+              <h5>Carolyn Stone</h5>
+              <p>Designer</p>
+            </div>
+          </div>
+          <div class="text">
+            <p>
+              "Bitcoin is one of the most important inventions in all of human
+              history. For the first time ever, anyone can send or receive any
+              amount of money .Lorem ipsum dolor sit amet consectetur
+              adipisicing elit."
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Testimonial 4 end -->
+{% endcomment %}
+
+<!-- Testimonial 4 start -->
+<div class="testimonial-4 comon-slick content-area-5">
+  <div class="container">
+    <!-- Main title -->
+    <div class="main-title-3">
+      <p>Testimonials</p>
+      <h1>Customer <span>Reviews</span></h1>
+    </div>
+    <div
+      class="slick row comon-slick-inner"
+      data-slick='{"slidesToShow": 2, "responsive":[{"breakpoint": 1024,"settings":{"slidesToShow": 2}}, {"breakpoint": 768,"settings":{"slidesToShow": 1}}]}'
+    >
+      {% for i in Testimonial %}
+
+      <div class="item slide-box">
+        <div class="testimonial-info">
+          <div class="user-section">
+            <div class="user-thumb">
+              <img src="{{i.Testimonial_image.url}}" alt="testimonial" />
+              <div class="icon">
+                <i class="fa fa-quote-right"></i>
+              </div>
+            </div>
+            <div class="user-name">
+              <h5>{{i.Testimonial_name}}</h5>
+              <p>{{i.Testimonial_profession}}</p>
+            </div>
+          </div>
+          <div class="text">
+            <p>{{i.Testimonial_sentence}}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %} {% comment %}
+      <div class="item slide-box">
+        <div class="testimonial-info">
+          <div class="user-section">
+            <div class="user-thumb">
+              <img
+                src="{% static 'web/img/avatar/avatar-2.jpg' %}"
+                alt="testimonial"
+              />
+              <div class="icon">
+                <i class="fa fa-quote-right"></i>
+              </div>
+            </div>
+            <div class="user-name">
+              <h5>Anne Brady</h5>
+              <p>Web Designer, Uk</p>
+            </div>
+          </div>
+          <div class="text">
+            <p>
+              "Bitcoin is one of the most important inventions in all of human
+              history. For the first time ever, anyone can send or receive any
+              amount of money .Lorem ipsum dolor sit amet consectetur
+              adipisicing elit."
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="item slide-box">
+        <div class="testimonial-info">
+          <div class="user-section">
+            <div class="user-thumb">
+              <img
+                src="{% static 'web/img/avatar/avatar-3.jpg' %}"
+                alt="testimonial"
+              />
+              <div class="icon">
+                <i class="fa fa-quote-right"></i>
+              </div>
+            </div>
+            <div class="user-name">
+              <h5>Carolyn Stone</h5>
+              <p>Designer</p>
+            </div>
+          </div>
+          <div class="text">
+            <p>
+              "Bitcoin is one of the most important inventions in all of human
+              history. For the first time ever, anyone can send or receive any
+              amount of money .Lorem ipsum dolor sit amet consectetur
+              adipisicing elit."
+            </p>
+          </div>
+        </div>
+      </div>
+      {% endcomment %}
+    </div>
+  </div>
+</div>
+<!-- Testimonial 4 end -->
+
+<!-- Partners strat -->
+<div class="partners bg-grea-5">
+  <div class="container">
+    <h4>Brands <span>$ Partners</span></h4>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="custom-slider slide-box-btn">
+          
+          
+
+          {% for b in brandspartners %}
+          <div class="custom-box">
+            <img src="{{b.brandspartners_image.url}}" alt="brand" />
+          </div>
+          {% endfor %}
+          {% comment %} <div class="custom-box">
+            <img src="{% static 'web/img/brand/brand-2.png' %}" alt="brand" />
+          </div>
+          <div class="custom-box">
+            <img src="{% static 'web/img/brand/brand-3.png' %}" alt="brand" />
+          </div>
+          <div class="custom-box">
+            <img src="{% static 'web/img/brand/brand-4.png' %}" alt="brand" />
+          </div>
+          <div class="custom-box">
+            <img src="{% static 'web/img/brand/brand-5.png' %}" alt="brand" />
+          </div>
+          <div class="custom-box">
+            <img src="{% static 'web/img/brand/brand-1.png' %}" alt="brand" />
+          </div>
+          <div class="custom-box">
+            <img src="{% static 'web/img/brand/brand-2.png' %}" alt="brand" />
+          </div>
+          <div class="custom-box">
+            <img src="{% static 'web/img/brand/brand-3.png' %}" alt="brand" />
+          </div>
+          <div class="custom-box">
+            <img src="{% static 'web/img/brand/brand-4.png' %}" alt="brand" />
+          </div> {% endcomment %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Partners end -->
+
+{% endblock %}
